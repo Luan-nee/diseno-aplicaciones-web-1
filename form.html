@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="#" method="post">
+    <label for="nombre">
+      Nombre:
+      <input type="text" pattern="[A-Za-z]+" name="nombre" id="nombre" required>
+    </label>
+    <br>
+    <label for="edad">
+      Edad
+      <input type="number" name="edad" id="edad" max="80" min="1" required>
+    </label>
+    <br>
+    <label for="password">
+      Contraseña:
+      <input type="password" name="password" id="password" minlength="6" maxlength="12" required>
+    </label>
+    <br>
+
+    Género:
+    <label for="genero">
+      <input type="radio" value="masculino" name="genero">
+      Masculino
+    </label>
+    <label for="genero">
+      <input type="radio" value="femenino" name="genero">
+      Femenino
+    </label>
+    <br>
+    <button type="submit">Enviar</button>
+
+    <br>
+    <h4>PASATIEMPOS</h4>
+    <label for="musica">
+      Escuchar música
+      <input type="checkbox" name="musica" id="musica" value="musica">
+    </label>
+    <br>
+    <label for="deporte">
+      Practicar deporte
+      <input type="checkbox" name="deporte" id="deporte" value="deporte">
+    </label>
+    <br>
+    <label for="leer">
+      Leer
+      <input type="checkbox" name="leer" id="leer" value="leer">
+    </label>
+    <br>
+    <label for="videojuegos">
+      Jugar videojuegos
+      <input type="checkbox" name="videojuegos" id="videojuegos" value="videojuegos">
+    </label>
+
+    <h4>Ubicación</h4>
+    <label for="pdto">Dónde resides?</label>
+    <select id="pdto" name="pdto" required>
+      <option selected disabled>Selecciona</option>
+      <option value="Puerto Maldonado">Puerto maldonado</option>
+      <option value="Iñapari">Iñapari</option>
+      <option value="Las Piedras">Las piedras</option>
+      <option value="Tahuamanu">Tahuamanu</option>
+      <option value="Tambopata">Tambopata</option>
+    </select>
+
+    <h4>País</h4>
+    <input list="pais">
+    <datalist id="pais">
+      <option value="Perú">Perú</option>
+      <option value="Colombia">Colombia</option>
+      <option value="Brasil">Brasil</option>
+      <option value="Chile">Chile</option>
+      <option value="Bolivia">Bolivia</option>
+      <option value="Argentina">Argentina</option>
+    </datalist>
+  </form>
+</body>
+</html>
