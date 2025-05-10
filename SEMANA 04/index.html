@@ -1,11 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Aula Virtual</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <!-- AGREGAR ESTRUCTURA DEL APLICATIVO (AULA GO) de la unamad -->
+  <div class="container">
+    <div class="form-container">
+      <img class="logo" src="./img/logo-unamad.png" alt="UNAMAD Logo">
+      <h2>AULA VIRTUAL</h2>
+      <form action="#" method="POST" class="login-form">
+        <div class="input-group">
+          <label for="usuario">USUARIO</label>
+          <div class="input-position">
+            <input type="text" id="usuario" placeholder="Ingrese su usuario">
+            <div class="icon">
+              <span>👤</span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="password">CONTRASEÑA</label>
+          <div class="input-position">
+            <input type="password" id="password" placeholder="Ingrese su contraseña">
+            <div class="icon">
+              <span>
+                🔒
+              </span>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn">INGRESAR</button>
+      </form>
+      <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+    </div>
+
+    <div class="image-container">
+      <img src="./img/wallpaper-unamad.jpg" alt="Background Image">
+    </div>
+  </div>
 </body>
 </html>
