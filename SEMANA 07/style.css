@@ -1,0 +1,174 @@
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+}
+
+
+.header{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  background-color: aquamarine;
+  padding: 0px 10px;
+}
+
+.header h2{
+  text-align: center;
+  padding: 20px;
+  font-size: 2.5rem;
+  color: white;
+  /* animation-name:colorear; */
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.header nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+}
+
+.header nav ul{ 
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0px;
+}
+
+.header nav ul li a{
+  padding: 10px 20px; 
+  font-size: 1.2rem;
+  transition-duration: 0.5s;
+}
+
+.header nav ul li a:hover{
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+@keyframes colorear {
+  10%{
+    background-color: white;
+  }
+  20% {
+    background-color: red;
+  }
+  30% {
+    background-color: blue;
+  }
+  40% {
+    background-color: green;
+  }
+  50% {
+    background-color: yellow;
+  }
+  60% {
+    background-color: orange;
+  }
+  70% {
+    background-color: purple;
+  }
+  80% {
+    background-color: pink;
+  }
+  90% {
+    background-color: brown;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+div.translate,
+div.translatex,
+div.translatey,
+div.scale,
+div.scalex,
+div.scaley,
+div.rotate,
+div.rotatex,
+div.rotatey,
+div.rotatez,
+div.skew,
+div.skewx,
+div.skewy {
+  width: 100px;
+  height: 100px;
+  background: goldenrod;
+  margin: 10px;
+  color: black;
+  text-align: center;
+  line-height: 100px;
+  transition: all 0.5s ease;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+
+
+  /* 
+    Nueva forma de como agregar estilos 
+  */
+  &.translate {
+    &:hover{
+      transform: translate(100px, 0);
+    }
+  }
+}
+
+  /* Forma común de como agregar estilos */
+/* div.translate:hover {
+  transform: translate(100px, 0);
+} */
+
+div.translatex:hover {
+  transform: translateX(30px);
+}
+
+div.translatey:hover {
+  transform: translateY(20px);
+}
+
+div.scale:hover {
+  transform: scale(1.2);
+}
+
+div.scalex:hover {
+  transform: scaleX(1.5);
+}
+
+div.scaley:hover {
+  transform: scaleY(1.5);
+}
+
+div.rotate:hover {
+  transform: rotate(45deg);
+}
+
+div.rotatex:hover {
+  transform: rotateX(45deg);
+}
+
+div.rotatey:hover {
+  transform: rotateY(45deg);
+}
+
+div.rotatez:hover {
+  transform: rotateZ(45deg);
+}
+
+div.skew:hover {
+  transform: skew(20deg, 10deg);
+}
+
+div.skewx:hover {
+  transform: skewX(25deg);
+}
+
+div.skewy:hover {
+  transform: skewY(25deg);
+}

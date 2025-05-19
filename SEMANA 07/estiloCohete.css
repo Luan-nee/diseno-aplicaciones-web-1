@@ -1,0 +1,86 @@
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.contenedor{
+  display: flex;
+  width: fit-content;
+  /* border-color: black; */
+  /* border-width: 1px;
+  border-style: solid; */
+  padding: 100px;
+  position: relative;
+}
+
+.cuadrado{
+  background-color:red;
+  width: 400px;
+  height: 200px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.cohete{
+  position: absolute;
+  object-fit: cover;
+  height: 100px;
+  /* border-color: black;
+  border-width: 1px;
+  border-style: solid; */
+  animation-fill-mode: forwards;
+  animation-duration: 5s;
+  animation-name: moverCohete;
+  top: 0px;
+  left: 100px;
+}
+
+@keyframes moverCohete{
+  0%{
+    top: 0px;
+    left: 100px;
+    transform: rotateZ(0deg);
+  }
+  20%{
+    top: 0px;
+    left: 500px;
+    transform: rotateZ(0deg)
+  }
+  30%{
+    top: 0px;
+    left: 500px;
+    transform: rotateZ(90deg);
+  }
+  50%{
+    top: 300px;
+    left: 500px;
+    transform: rotateZ(90deg);
+  }
+  60%{
+    top: 300px;
+    left: 500px;
+    transform: rotateZ(180deg);
+  }
+  80%{
+    top: 300px;
+    left: 0px;
+    transform: rotateZ(180deg);
+  }
+  90%{
+    top: 300px;
+    left: 0px;
+    transform: rotateZ(270deg);
+  }
+  100%{
+    top: 100px;
+    left: 0px;
+    transform: rotateZ(270deg);
+  }
+  /* 100%{
+    top: 0px;
+    left: 0px;
+    transform: rotateZ(360deg);
+  } */
+}
