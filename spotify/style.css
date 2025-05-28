@@ -1,0 +1,351 @@
+:root{
+  --primary-color: #1db954;
+  --secondary-color-01: #000000;
+  --secondary-color-02: #191414;
+  --secondary-color-03: #505050;
+  --secondary-color-04: #ffffff;
+
+  --genre-color01: #55a891;
+  --genre-color02: #27856a;
+  --genre-color03: #5f8109;
+
+  --genre-color05: #f037a5;
+  --genre-color06: #af2896;
+  --genre-color07: #af2896;
+  --genre-color08: #477d95;
+  --genre-color09: #509bf5;
+  --genre-color10: #1d3164;
+  --genre-color11: #e8115b;
+  --genre-color12: #e13300;
+  --genre-color13: #ba5d07;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  list-style-type: none;
+}	
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #181818;
+  color: #fff;
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: #000;
+  padding: 24px 0 24px 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 18px;
+  display: flex;
+  flex: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar nav ul li a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.sidebar nav ul li a:hover {
+  color: #fff;
+}
+
+.playlist-section {
+  margin-bottom: 24px;
+}
+
+.playlist-section p {
+  color: #b3b3b3;
+  margin: 8px 0;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.genres-list {
+  color: #b3b3b3;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-top: 16px;
+  height: 100%;
+  overflow-y: auto;
+  padding-left: 0;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 32px 40px 32px 40px;
+  background: #181818;
+  gap:10px;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+header > div:nth-of-type(1){
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+}
+
+/* header ~ div:nth-of-type(2){
+  display: flex;
+} */
+
+header input[type="text"] {
+  display: flex;
+  flex-direction: row;
+  width: 240px;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #242424;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+}
+
+.section-buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.section-buttons button{
+  background: var(--secondary-color-01);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.section-buttons button:nth-of-type(2) svg{
+  transform: rotate(180deg);
+}
+
+/* .actions-buttons-direction{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.actions-buttons-direction button{
+  background: var(--secondary-color-01);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.actions-buttons-direction button:nth-of-type(2) svg{
+  transform: rotate(180deg);
+} */
+
+.user-profile {
+  display: flex;
+  width: 140px;
+  color: #fff;
+  background: #242424;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.section-header h2 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.section-header a {
+  color: #b3b3b3;
+  font-size: 13px;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.recent-searches {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+}
+
+.searches-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.search-item {
+  background: #242424;
+  border-radius: 10px;
+  padding: 10px 7px 20px 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.search-item:hover {
+  background: #333;
+}
+
+.search-item section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.search-item section img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.search-item span {
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+}
+
+.search-item small {
+  color: #b3b3b3;
+  font-size: 13px;
+}
+
+.top-genres h2,
+.browse-all h2 {
+  font-size: 22px;
+  margin: 20px 0 10px 0;
+}
+
+.genres-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.browser-grid{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.genre-card {
+  position: relative;
+  border-radius: 5px;
+  height: 150px;
+  padding: 10px 0px 0px 10px;
+  width: 100%;
+  font-size: 25px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  transition: transform 0.15s, box-shadow 0.15s;
+  overflow: hidden;
+}
+
+.genre-card section {
+  transform: rotateZ(28deg);
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  display: flex;
+  width: 80px;
+  height: 90px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.genre-card section img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.genre-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+
+.genre-card.hiphop { background: #e1336d; }
+.genre-card.electronic { background: #1db954; }
+.genre-card.alternative { background: #af2896; }
+.genre-card.lounge { background: #8d67ab; }
+.genre-card.blues { background: #509bf5; }
+.genre-card.funk { background: #27856a; }
+.genre-card.retro { background: #b49bc8; }
+.genre-card.latin { background: #477d95; }
+.genre-card.jazz { background: #e13300; }
+.genre-card.ambient { background: #ba5d07; }
+.genre-card.cinematic { background: #e61e32; }
+.genre-card.fantasy { background: #1e3264; }
+.genre-card.pop { background: #e8115b; }
+.genre-card.world { background: #148a08; }
+.genre-card.folk { background: #bc5900; }
+
+/* Scrollbar styles for sidebar and recent searches */
+.sidebar nav ul.genres-list,
+.recent-searches .searches-list {
+  scrollbar-width: thin;
+  scrollbar-color: #333 #181818;
+}
+
+.sidebar nav ul.genres-list::-webkit-scrollbar,
+.recent-searches .searches-list::-webkit-scrollbar {
+  height: 8px;
+  background: #181818;
+}
+
+.sidebar nav ul.genres-list::-webkit-scrollbar-thumb,
+.recent-searches .searches-list::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
