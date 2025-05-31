@@ -36,7 +36,6 @@ body {
   color: #fff;
   display: flex;
   min-height: 100vh;
-  height: 100vh;
   overflow: hidden;
 
 }
@@ -47,14 +46,8 @@ body {
   padding: 24px 5px 15px 5px;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   overflow-y: auto;
-}
-
-.sidebar nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 24px 0;
 }
 
 .sidebar nav ul li {
@@ -94,9 +87,13 @@ body {
   color: #b3b3b3;
   font-size: 13px;
   line-height: 1.7;
-  margin: 16px 16px 0px 16px;
+  padding: 15px 20px;
   overflow-y: auto;
-  padding-left: 0;
+}
+.genres-list li {
+  padding: 2px 0;
+  cursor: pointer;
+  transition: color 0.2s;
 }
 
 .main-content {
@@ -105,7 +102,9 @@ body {
   width: 100%;
   padding: 32px 40px 32px 40px;
   background: #181818;
-  gap:10px;
+  gap: 10px;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 header{
@@ -187,7 +186,7 @@ header input[type="text"] {
 
 .user-profile {
   display: flex;
-  width: 140px;
+  white-space: nowrap;
   color: #fff;
   background: #242424;
   padding: 8px 18px;
@@ -217,7 +216,6 @@ header input[type="text"] {
 .recent-searches {
   display: flex;
   flex-direction: column;
-  overflow-x: auto;
 }
 
 .searches-list{
