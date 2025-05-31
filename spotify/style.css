@@ -36,15 +36,19 @@ body {
   color: #fff;
   display: flex;
   min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+
 }
 
 .sidebar {
   width: 240px;
   background: #000;
-  padding: 24px 0 24px 24px;
+  padding: 24px 5px 15px 5px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-y: auto;
 }
 
 .sidebar nav ul {
@@ -84,11 +88,13 @@ body {
 }
 
 .genres-list {
+  border-width: 2px 0px 0px 0px;
+  border-style: solid;
+  border-color: var(--secondary-color-02);
   color: #b3b3b3;
   font-size: 13px;
   line-height: 1.7;
-  margin-top: 16px;
-  height: 100%;
+  margin: 16px 16px 0px 16px;
   overflow-y: auto;
   padding-left: 0;
 }
@@ -348,4 +354,21 @@ header input[type="text"] {
 .recent-searches .searches-list::-webkit-scrollbar-thumb {
   background: #333;
   border-radius: 4px;
+}
+
+/* APARIENCIA DEL SCROLL VERTICAL */
+
+/* Ancho de la barra de scroll vertical */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Fondo de la barra (track) */
+::-webkit-scrollbar-track {
+  background: var(--secondary-color-01);
+}
+
+/* Color del "thumb" (el botón que se arrastra) */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color-03);  
 }
