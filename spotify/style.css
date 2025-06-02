@@ -32,7 +32,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #181818;
+  background: var(--secondary-color-01);
   color: #fff;
   display: flex;
   min-height: 100vh;
@@ -320,54 +320,49 @@ header input[type="text"] {
   box-shadow: 0 4px 24px rgba(0,0,0,0.25);
 }
 
-.genre-card.hiphop { background: #e1336d; }
-.genre-card.electronic { background: #1db954; }
-.genre-card.alternative { background: #af2896; }
-.genre-card.lounge { background: #8d67ab; }
-.genre-card.blues { background: #509bf5; }
-.genre-card.funk { background: #27856a; }
-.genre-card.retro { background: #b49bc8; }
-.genre-card.latin { background: #477d95; }
-.genre-card.jazz { background: #e13300; }
-.genre-card.ambient { background: #ba5d07; }
-.genre-card.cinematic { background: #e61e32; }
-.genre-card.fantasy { background: #1e3264; }
-.genre-card.pop { background: #e8115b; }
-.genre-card.world { background: #148a08; }
-.genre-card.folk { background: #bc5900; }
-
-/* Scrollbar styles for sidebar and recent searches */
-.sidebar nav ul.genres-list,
-.recent-searches .searches-list {
-  scrollbar-width: thin;
-  scrollbar-color: #333 #181818;
+.genre-card.hiphop { 
+  background: #e1336d; 
+}
+.genre-card.electronic { 
+  background: #1db954; 
+}
+.genre-card.alternative { 
+  background: #af2896; 
+}
+.genre-card.lounge { 
+  background: #8d67ab; 
+}
+.genre-card.blues { 
+  background: #509bf5; 
+}
+.genre-card.funk { 
+  background: #27856a; 
+}
+.genre-card.retro {
+  background: #b49bc8; 
+}
+.genre-card.latin {
+  background: #477d95; 
+}
+.genre-card.jazz { 
+  background: #e13300;
+}
+.genre-card.ambient {
+  background: #ba5d07;
+}
+.genre-card.cinematic {
+  background: #e61e32;
+}
+.genre-card.fantasy {
+  background: #1e3264;
+}
+.genre-card.pop {
+  background: #e8115b;
+}
+.genre-card.world {
+  background: #148a08;
+}
+.genre-card.folk {
+  background: #bc5900;
 }
 
-.sidebar nav ul.genres-list::-webkit-scrollbar,
-.recent-searches .searches-list::-webkit-scrollbar {
-  height: 8px;
-  background: #181818;
-}
-
-.sidebar nav ul.genres-list::-webkit-scrollbar-thumb,
-.recent-searches .searches-list::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 4px;
-}
-
-/* APARIENCIA DEL SCROLL VERTICAL */
-
-/* Ancho de la barra de scroll vertical */
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Fondo de la barra (track) */
-::-webkit-scrollbar-track {
-  background: var(--secondary-color-01);
-}
-
-/* Color del "thumb" (el botón que se arrastra) */
-::-webkit-scrollbar-thumb {
-  background: var(--secondary-color-03);  
-}
