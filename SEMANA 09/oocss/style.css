@@ -361,6 +361,26 @@ body {
     opacity: 1;
 }
 
+.shine-img{
+    display: none;
+    z-index: 0;
+}
+
+
+.card-image:hover .shine-img{
+    display: flex;
+    z-index: 1000;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+    pointer-events: none;
+    animation: shine-center 4s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
 /* BRILLO PARA TARJETAS */
 .card::after {
     content: '';
@@ -379,27 +399,67 @@ body {
     animation: shine 0.7s ease-in-out;
 }
 
-.shine-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  animation: shine 2s infinite;
-}
+/* .shine-img {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    animation: shine 2s infinite;
+} */
 
 @keyframes shine {
-  0% {
-    opacity: 0;
-    transform: translate(-150%, -150%) rotate(90deg);
-  }
+    0% {
+        transform: translate(-150%, -150%) rotate(90deg);
+    }
 
-  50% {
-    opacity: 1;
-    transform: translate(-50%, -50%) rotate(90deg); /* Centro */
-  }
+    50% {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
 
-  100% {
+    100% {
+        transform: translate(50%, 50%) rotate(90deg);
+    }
+}
+
+/* .shine-img {
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    transform: translate(-50%, -50%) scale(0.7);
     opacity: 0;
-    transform: translate(50%, 50%) rotate(90deg);
-  }
+    pointer-events: none;
+    animation: shine-center 2s cubic-bezier(0.4,0,0.2,1) forwards;
+    box-shadow: 0 0 40px 10px rgba(255,255,255,0.4);
+} */
+
+@keyframes shine-center {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7) rotate(-30deg);
+        filter: blur(8px);
+    }
+    20% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1) rotate(10deg);
+        filter: blur(2px);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        filter: blur(0);
+    }
+    80% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1) rotate(-10deg);
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7) rotate(30deg);
+        filter: blur(8px);
+    }
 }
