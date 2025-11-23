@@ -5,8 +5,9 @@
 
 // 2. COMPONENTS (Buttons, Cards, Modals)
 @import 'components/icons';
-// @import 'components/cards';
-// @import 'components/modals';
+@import 'components/buttons';
+@import 'components/linkNav';
+@import 'components/searchBar';
 
 // 4. LAYOUT (Header, Footer, Grid, navbar)
-// @import 'layouts/navbar';
+@import 'layouts/navbar';

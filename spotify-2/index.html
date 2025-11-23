@@ -1,43 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spitify-Pirata</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <nav>
-    <!-- logo de spotify -->
-    <div class="logoContent">
-      <img class="logoImage" src="./assets/icons/Spotify_icon.svg.png" alt="">
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spitify-Pirata</title>
+    <link rel="stylesheet" href="./resetStyles.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="navbar" style="display: flex; justify-content: space-between; padding: 12px 24px;">
+      <!-- logo spotify, logo de casa, barra de busqueda -->
+      <div style="display: flex; flex-direction: row; gap: 12px;">
+        <!-- logo de spotify -->
+        <div class="logoContent">
+          <img
+            class="logoImage"
+            src="./assets/icons/Spotify_icon.svg.png"
+            alt=""
+          />
+        </div>
+  
+        <!-- logo de casa -->
+        <div class="logoContent">
+          <img class="logoImage" src="./assets/icons/home.png" alt="" />
+        </div>
+  
+        <!-- barra de busqueda -->
+        <div class="searchBar">
+          <div class="logoSearch">
+            <img src="./assets/icons/search.png" alt="">
+          </div>
+          <input type="text" placeholder="Buscar en Spitify-Pirata" />
+          <div class="logoExplore">
+            <img src="./assets/icons/explore.png" alt="">
+          </div>
+        </div>
+      </div>
 
-    <!-- logo de casa -->
-    <div>
-      <img src="" alt="">
-    </div>
+      <div style="display: flex; flex-direction: row; gap: 12px;">
+        <!-- más opciones -->
+        <div style="display: flex; flex-direction: row; align-items: center;">
+          <a href="/#premiun" class="linkNav">
+            <span class="linkNav-label">
+              Premiun
+            </span>
+          </a>
+          <a href="/#Ayuda" class="linkNav">
+            <span class="linkNav-label">
+              Ayuda
+            </span>
+          </a>
+          <a href="/#Descargar" class="linkNav">
+            <span class="linkNav-label">
+              Descargar
+            </span>
+          </a>
+          <div style="height: 24px; width: 1px; background-color: white;" ></div>
+          <a href="/#Instalar aplicación" class="linkNav">
+            <span class="linkNav-label">
+              Instalar aplicación
+            </span>
+          </a>
+          <a href="/#Regístrate" class="linkNav">
+            <span class="linkNav-label">
+              Regístrate
+            </span>
+          </a>
+        </div>
+  
+        <!-- btn iniciar seción -->
+        <button class="btn">
+          <span class="btn-label"> Iniciar sesión </span>
+        </button>
+      </div>
 
-    <!-- barra de busqueda -->
-    <div>
-      <input type="text" placeholder="Buscar en Spitify-Pirata">
-    </div>
-
-    <!-- más opciones -->
-    <div>
-      <button>Premiun</button>
-      <button>Ayuda</button>
-      <button>Descargar</button>
-      <span>|</span>
-      <button>Instalar aplicación</button>
-      <button>Regístrate</button>
-    </div>
-
-    <!-- btn iniciar seción -->
-    <div>
-      <button>Iniciar sesión</button>
-    </div>
-  </nav>
-
-</body>
+    </nav>
+  </body>
 </html>

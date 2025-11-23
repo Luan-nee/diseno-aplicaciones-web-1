@@ -1,0 +1,23 @@
+.linkNav {
+  color: rgb(185, 185, 185);
+  cursor: pointer;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .linkNav-label{
+    transition: transform 0.1s ease-out, color 0.1s ease-out; 
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+
+  &:hover{
+    color: rgb(255, 255, 255);
+    .linkNav-label{
+      transform: scale(1.04); // Escala el span al 120%
+      color: white;
+    }
+  }
+}

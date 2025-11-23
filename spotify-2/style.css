@@ -8,11 +8,132 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 .logoContent .logoImage {
-  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.btn {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 10px 30px;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.btn .btn-label {
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.linkNav {
+  color: rgb(185, 185, 185);
+  cursor: pointer;
+  padding: 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.linkNav .linkNav-label {
+  -webkit-transition: color 0.1s ease-out, -webkit-transform 0.1s ease-out;
+  transition: color 0.1s ease-out, -webkit-transform 0.1s ease-out;
+  transition: transform 0.1s ease-out, color 0.1s ease-out;
+  transition: transform 0.1s ease-out, color 0.1s ease-out, -webkit-transform 0.1s ease-out;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+.linkNav:hover {
+  color: rgb(255, 255, 255);
+}
+.linkNav:hover .linkNav-label {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+  color: white;
+}
+
+.searchBar {
+  background-color: #1f1f1f;
+  border-radius: 30px;
+  border: 1px solid #404040;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.searchBar input[type=text] {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border: none;
+  background: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  color: #B3B3B3;
+  padding: 0 10px;
+}
+
+.searchBar input[type=text]:focus {
+  outline: none;
+}
+
+.logoSearch,
+.logoExplore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.searchBar img {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1rem;
 }
