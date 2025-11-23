@@ -1,0 +1,81 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+
+.content-trebol{
+  display: grid;
+  width: fit-content;
+  grid-template-columns: 1fr 1fr;
+}
+
+.content-hoja{
+  box-shadow: 0px 0px 100px black;
+  position: relative;  
+  width: 150px;
+  height: 150px;
+}
+
+.hoja_de {
+  width: 100px;
+  height: 150px;
+  right: 0px;
+  background-color: green;
+  position: absolute;
+  border-radius: 50% 50% 0 50%;
+}
+
+.content-raya{
+  position: absolute;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  bottom: 0px;
+  right: 0px;
+}
+
+.hoja_iz { 
+  width: 150px;
+  height: 100px;
+  bottom: 0px;
+  background-color: green;
+  position: absolute;
+  border-radius: 50% 50% 0 50%;
+}
+
+.hoja-t-iz{
+  transform: rotate(0deg);
+}
+
+.raya{
+  width: 5px;
+  height: 80px;
+  background-color: brown;
+  bottom: 0px;
+  right: 20px;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+
+.raya-t-iz{
+  /* transform: rotate(45deg); */
+  bottom: 0px;
+  right: 0px;
+}
+
+.hoja-t-de{
+  transform: rotate(90deg);
+}
+.hoja-b-iz{
+  transform: rotate(270deg);
+}
+.hoja-b-de{
+  transform: rotate(180deg);
+}

@@ -1,0 +1,19 @@
+@import 'variables';
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin box-shadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin transition($properties..., $duration: 0.3s, $timing-function: ease-in-out) {
+  transition: $properties $duration $timing-function;
+}

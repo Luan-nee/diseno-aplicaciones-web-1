@@ -1,0 +1,48 @@
+@import 'variables';
+@import 'mixins';
+
+
+.navbar {
+  background-color: $dark-color;
+  padding: $spacing-medium;
+  
+  .navbar-brand {
+    font-family: $font-main;
+    font-size: $font-size-large;
+    font-weight: bold;
+    
+    &:hover {
+      color: $primary-color;
+      transition: color 0.3s ease-in-out;
+    }
+  }
+}
+
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: $spacing-large;
+  
+  .nav-item {
+    font-size: $font-size-base;
+    color: $light-color;
+    
+    &:hover {
+      color: $secondary-color;
+      @include transition(color);
+    }
+  }
+}
+
+.contenedor{
+  display: flex;
+}
+
+.card{
+  background-color: white;
+  padding: $spacing-large;
+  @include border.radius($radius);
+  @include box-shadow(0px, 4px, 8px, rgba(0, 0, 0, 0.1));
+  @include transition(box-shadow);  
+}
