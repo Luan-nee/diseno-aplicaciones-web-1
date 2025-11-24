@@ -4,6 +4,8 @@
   justify-content: space-between; 
   padding: 12px 24px;
   gap: 1rem;
+  grid-column-start: 1;
+  grid-column-end: 4;
 
   .leftNav{
     display: flex; 

@@ -8,78 +8,169 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-
-    <!-- NAVBAR -->
-    <nav class="navbar">
-      <!-- logo spotify, logo de casa, barra de busqueda -->
-      <div class="leftNav">
-        <!-- logo de spotify -->
-        <div class="logoContent">
-          <img
-            class="logoImage"
-            src="./assets/icons/Spotify_icon.svg.png"
-            alt=""
-          />
-        </div>
-
-        <!-- logo de casa -->
-        <div class="logoContent">
-          <img class="logoImage" src="./assets/icons/home.png" alt="" />
-        </div>
-
-        <!-- barra de busqueda -->
-        <div class="searchBar">
-          <div class="logoSearch">
-            <img src="./assets/icons/search.png" alt="" />
+    <section id="app">
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <!-- logo spotify, logo de casa, barra de busqueda -->
+        <div class="leftNav">
+          <!-- logo de spotify -->
+          <div class="logoContent">
+            <img
+              class="logoImage"
+              src="./assets/icons/Spotify_icon.svg.png"
+              alt=""
+            />
           </div>
-          <input type="text" placeholder="Buscar en Spitify-Pirata" />
-          <div class="logoExplore">
-            <img src="./assets/icons/explore.png" alt="" />
+
+          <!-- logo de casa -->
+          <div class="logoContent">
+            <img class="logoImage" src="./assets/icons/home.png" alt="" />
+          </div>
+
+          <!-- barra de busqueda -->
+          <div class="searchBar">
+            <div class="logoSearch">
+              <img src="./assets/icons/search.png" alt="" />
+            </div>
+            <input type="text" placeholder="Buscar en Spitify-Pirata" />
+            <div class="logoExplore">
+              <img src="./assets/icons/explore.png" alt="" />
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="rightNav">
-        <!-- más opciones -->
-        <div class="masOpciones">
-          <a href="/#premiun" class="linkNav">
-            <span class="linkNav-label"> Premiun </span>
-          </a>
-          <a href="/#Ayuda" class="linkNav">
-            <span class="linkNav-label"> Ayuda </span>
-          </a>
-          <a href="/#Descargar" class="linkNav">
-            <span class="linkNav-label"> Descargar </span>
-          </a>
-          <div style="height: 24px; width: 1px; background-color: white"></div>
-          <a href="/#Instalar aplicación" class="linkNav">
-            <span class="linkNav-label"> Instalar aplicación </span>
-          </a>
-          <a href="/#Regístrate" class="linkNav">
-            <span class="linkNav-label"> Regístrate </span>
-          </a>
+        <div class="rightNav">
+          <!-- más opciones -->
+          <div class="masOpciones">
+            <a href="#premiun" class="linkNav">
+              <span class="linkNav-label"> Premiun </span>
+            </a>
+            <a href="#Ayuda" class="linkNav">
+              <span class="linkNav-label"> Ayuda </span>
+            </a>
+            <a href="#Descargar" class="linkNav">
+              <span class="linkNav-label"> Descargar </span>
+            </a>
+            <div
+              style="height: 24px; width: 1px; background-color: white"
+            ></div>
+            <a href="#Instalar aplicación" class="linkNav">
+              <span class="linkNav-label"> Instalar aplicación </span>
+            </a>
+            <a href="#Regístrate" class="linkNav">
+              <span class="linkNav-label"> Regístrate </span>
+            </a>
+          </div>
+
+          <!-- btn iniciar seción -->
+          <button class="btn">
+            <span class="btn-label"> Iniciar sesión </span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- DISEÑO DEL ASIDE -->
+      <aside class="library-sidebar">
+        <div class="library-header">
+          <div class="library-title-group">
+            <img
+              src="./assets/icons/sidebar.png"
+              alt="Icono para esconder el sidebar"
+              class="library-icon"
+            />
+            <h2 class="library-title">Tu biblioteca</h2>
+          </div>
+
+          <div class="header-actions">
+            <button class="add-button">+</button>
+            <button class="expand-button">
+              <img
+                class="expand-icon"
+                src="./assets/icons/expand.png"
+                alt="Icono de expandir"
+              />
+            </button>
+          </div>
         </div>
 
-        <!-- btn iniciar seción -->
-        <button class="btn">
-          <span class="btn-label"> Iniciar sesión </span>
-        </button>
-      </div>
-    </nav>
+        <div class="filter-buttons">
+          <button class="filter-button active">Playlists</button>
+        </div>
 
-    <section id="contenido-principal">
-      <!-- LISTA DE ARTISTAS -->
-      <section class="contentSection">
-        <h2 class="titleSection">Artistas populares</h2>
-        <!-- LISTA DE CARD ARTISTAS -->
-        <div class="list">
-          <!-- SCRIPT PARA GENERAR CARDS ARTISTAS -->
+        <div class="search-sort-bar">
+          <!-- <div class="search-icon">
+            <img src="./assets/icons/search.png" alt="Icono de búsqueda" />
+          </div> -->
+
+          <div class="sort-options">
+            <span class="sort-label">Recientes</span>
+            <img
+              src="./assets/icons/options.png"
+              alt="Icono de lista"
+              class="list-icon"
+            />
+          </div>
+        </div>
+
+        <!-- LISTA DE PLAYLISTS -->
+        <div class="rowPlayList">
           <script>
-            const artistaContainer = document.currentScript.parentElement;
-            for (let i = 4; i <= 9; i++) {
-              const artistaCard = document.createElement("div");
-              artistaCard.className = "ArtistaCard";
-              artistaCard.innerHTML = `
+            // script para generar más playlists en el aside
+            const playlistContainer = document.currentScript.parentElement;
+            for (let i = 1; i <= 7; i++) {
+              const playlistItem = document.createElement("div");
+              playlistItem.className = "playlist-item";
+              playlistItem.innerHTML = `
+            <div class="playlist-icon-container" style="position: relative">
+              <img
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  right: 0;
+                  width: 40%;
+                  height: 40%;
+                  border-radius: 0;
+                "
+                src="./assets/icons/playList.png"
+                alt="Icono de nota musical"
+                class="music-note-icon"
+              />
+
+              <img
+                style="width: 40px; height: 40px"
+                src="./assets/playlists/Art ${i}.jpg"
+                alt="Imagen de la playlist"
+                class="foto-playlist"
+              />
+            </div>
+
+            <div class="playlist-info">
+              <p class="playlist-name">Nombre de la Playlist ${i}</p>
+              <p class="playlist-details">
+                Playlist • Descripción breve de la playlist ${i}...
+              </p>
+            </div>
+            `;
+              playlistContainer.appendChild(playlistItem);
+            }
+          </script>
+        </div>
+      </aside>
+
+      <!-- SECCIÓN DE MUSICAS Y ARTISTAS -->
+      <section id="contenido-principal">
+        <!-- LISTA DE ARTISTAS -->
+        <section class="contentSection">
+          <h2 class="titleSection">Artistas populares</h2>
+          <!-- LISTA DE CARD ARTISTAS -->
+          <div class="list">
+            <!-- SCRIPT PARA GENERAR CARDS ARTISTAS -->
+            <script>
+              const artistaContainer = document.currentScript.parentElement;
+              for (let i = 4; i <= 9; i++) {
+                const artistaCard = document.createElement("div");
+                artistaCard.className = "ArtistaCard";
+                artistaCard.innerHTML = `
                 <div class="fotoContent">
                   <img class="foto" src="./assets/main/Ellipse ${i}.png" alt="Artista ${i}">
                   <img class="playButton" src="./assets/icons/play-green.png" alt="button play">
@@ -87,24 +178,24 @@
                 <p class="nombre">Nombre del Artista</p>
                 <p class="descripcion">Artista</p>
                 `;
-              artistaContainer.appendChild(artistaCard);
-            }
-          </script>
-        </div>
-      </section>
+                artistaContainer.appendChild(artistaCard);
+              }
+            </script>
+          </div>
+        </section>
 
-      <!-- LISTA DE ÁLBUMES Y SENCILLOS POPULARES -->
-      <section class="contentSection">
-        <h2 class="titleSection">Álmbumes y sencillos populares</h2>
-        <!-- LISTA CARD ÁLBUMES -->
-        <div class="list">
-          <!-- SCRIPT PARA GENERAR CARDS ÁLBUMES -->
-          <script>
-            const albumContainer = document.currentScript.parentElement;
-            for (let i = 1; i <= 10; i++) {
-              const albumCard = document.createElement("div");
-              albumCard.className = "AlbumCard";
-              albumCard.innerHTML = `
+        <!-- LISTA DE ÁLBUMES Y SENCILLOS POPULARES -->
+        <section class="contentSection">
+          <h2 class="titleSection">Álmbumes y sencillos populares</h2>
+          <!-- LISTA CARD ÁLBUMES -->
+          <div class="list">
+            <!-- SCRIPT PARA GENERAR CARDS ÁLBUMES -->
+            <script>
+              const albumContainer = document.currentScript.parentElement;
+              for (let i = 1; i <= 10; i++) {
+                const albumCard = document.createElement("div");
+                albumCard.className = "AlbumCard";
+                albumCard.innerHTML = `
                   <div class="fotoContent">
                     <img class="foto" src="./assets/albums/${i}.png" alt="Álbum ${i}">
                     <img class="playButton" src="./assets/icons/play-green.png" alt="button play">
@@ -112,145 +203,155 @@
                   <p class="nombre">Nombre del Artista</p>
                   <p class="descripcion">Artista</p>
                   `;
-              albumContainer.appendChild(albumCard);
-            }
-          </script>
-        </div>
-      </section>
+                albumContainer.appendChild(albumCard);
+              }
+            </script>
+          </div>
+        </section>
 
-      <!-- LISTA DE ESTACIONES POPULARES (clon de Álmbumes y sencillos populares) -->
-      <section class="contentSection">
-        <h2 class="titleSection">Estaciones populares</h2>
-        <!-- LISTA CARD ÁLBUMES -->
-        <div class="list">
-          <!-- SCRIPT PARA GENERAR CARDS ÁLBUMES -->
-          <script>
-            const estacionContainer = document.currentScript.parentElement;
-            for (let i = 1; i <= 10; i++) {
-              const albumCard = document.createElement("div");
-              albumCard.className = "AlbumCard";
-              albumCard.innerHTML = `
+        <!-- LISTA DE ESTACIONES POPULARES (clon de Álmbumes y sencillos populares) -->
+        <section class="contentSection">
+          <h2 class="titleSection">Estaciones populares</h2>
+          <!-- LISTA CARD ÁLBUMES -->
+          <div class="list">
+            <!-- SCRIPT PARA GENERAR CARDS ÁLBUMES -->
+            <script>
+              const estacionContainer = document.currentScript.parentElement;
+              for (let i = 1; i <= 10; i++) {
+                const albumCard = document.createElement("div");
+                albumCard.className = "AlbumCard";
+                albumCard.innerHTML = `
                   <div class="fotoContent">
                     <img class="foto" src="./assets/albums/${i}.png" alt="Álbum ${i}">
                     <img class="playButton" src="./assets/icons/play-green.png" alt="button play">
                   </div>
                   <p class="descripcion">Desripción detallada de la estación ${i} - ejemplo.</p>
                   `;
-              estacionContainer.appendChild(albumCard);
-            }
-          </script>
-        </div>
-      </section>
+                estacionContainer.appendChild(albumCard);
+              }
+            </script>
+          </div>
+        </section>
 
-      <!-- LISTA DESTACADAS (clon de Álmbumes y sencillos populares) -->
-      <section class="contentSection">
-        <h2 class="titleSection">Listas destacadas</h2>
-        <!-- LISTA CARD ÁLBUMES -->
-        <div class="list">
-          <!-- SCRIPT PARA GENERAR CARDS ÁLBUMES -->
-          <script>
-            const destacadasContainer = document.currentScript.parentElement;
-            for (let i = 1; i <= 10; i++) {
-              const albumCard = document.createElement("div");
-              albumCard.className = "AlbumCard";
-              albumCard.innerHTML = `
+        <!-- LISTA DESTACADAS (clon de Álmbumes y sencillos populares) -->
+        <section class="contentSection">
+          <h2 class="titleSection">Listas destacadas</h2>
+          <!-- LISTA CARD ÁLBUMES -->
+          <div class="list">
+            <!-- SCRIPT PARA GENERAR CARDS ÁLBUMES -->
+            <script>
+              const destacadasContainer = document.currentScript.parentElement;
+              for (let i = 1; i <= 10; i++) {
+                const albumCard = document.createElement("div");
+                albumCard.className = "AlbumCard";
+                albumCard.innerHTML = `
                   <div class="fotoContent">
                     <img class="foto" src="./assets/albums/${i}.png" alt="Álbum ${i}">
                     <img class="playButton" src="./assets/icons/play-green.png" alt="button play">
                   </div>
                   <p class="descripcion">Tu actualización semanal de las ...${i}</p>
                   `;
-              destacadasContainer.appendChild(albumCard);
-            }
-          </script>
-        </div>
-      </section>
-
-      <!-- AGREGANDO ESPACIO VACÍO -->
-      <div style="width: 100%; height: 1  40px;"></div>
-
-      <!-- FOOTER -->
-      <section style="display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid #282828; padding: 45px 0;">
-        <!-- lista de compañia -->
-        <div class="listFooter">
-          <h3 class="listTitle">Compañía</h3>
-          <ul>
-            <li class="listItem">
-              <a href="#">Acerca de</a>
-            </li>
-            <li class="listItem">
-              <a href="#">Empleo</a>
-            </li>
-            <li class="listItem">
-              <a href="#">For the Record</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- lista de comunidades -->
-        <div class="listFooter">
-          <h3 class="listTitle">Comunidades</h3>
-          <ul>
-            <li class="listItem"><a href="#">Para artistas</a></li>
-            <li class="listItem"><a href="#">Desarrolladores</a></li>
-            <li class="listItem"><a href="#">Publicidad</a></li>
-            <li class="listItem"><a href="#">Inversionistas</a></li>
-            <li class="listItem"><a href="#">Proveedores</a></li>
-          </ul>
-        </div>
-
-        <!-- lista de enlaces útiles -->
-        <div class="listFooter">
-          <h3 class="listTitle">Enlaces útiles</h3>
-          <ul>
-            <li class="listItem"><a href="#">Ayuda</a></li>
-            <li class="listItem"><a href="#">App móvil gratis</a></li>
-            <li class="listItem"><a href="#">Contenido popular por país</a></li>
-            <li class="listItem"><a href="#">Import your music</a></li>
-          </ul>
-        </div>
-
-        <!-- lista de planes de Spotify -->
-        <div class="listFooter">
-          <h3 class="listTitle">Planes de Spotify</h3>
-          <ul>
-            <li class="listItem"><a href="#">Premium Individual</a></li>
-            <li class="listItem"><a href="#">Premium Duo</a></li>
-            <li class="listItem"><a href="#">Premium Familiar</a></li>
-            <li class="listItem"><a href="#">Premium para Estudiantes</a></li>
-            <li class="listItem"><a href="#">Versión gratuita</a></li>
-          </ul>
-        </div>
-
-        <!-- redes sociales -->
-        <article class="redesSociales">
-          <div class="contentImgRedSocial">
-            <img
-              class="foto"
-              src="./assets/icons/instagram.png"
-              alt="Instagram"
-            />
+                destacadasContainer.appendChild(albumCard);
+              }
+            </script>
           </div>
-          <div class="contentImgRedSocial">
-            <img class="foto" src="./assets/icons/twitter.png" alt="Twitter" />
-          </div>
-          <div class="contentImgRedSocial">
-            <img
-              class="foto"
-              src="./assets/icons/facebook.png"
-              alt="Facebook"
-            />
-          </div>
-        </article>
-      </section>
+        </section>
 
-      <section class="credist">
-        <p class="label-credist">© 2025 Spotify AB</p>
-      </section>
-    </section>
+        <!-- AGREGANDO ESPACIO VACÍO -->
+        <div style="width: 100%; height: 1 40px"></div>
 
-    <section id="contenido-biblioteca">
-      
+        <!-- FOOTER -->
+        <section
+          style="
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border-top: 1px solid #282828;
+            padding: 45px 0;
+          "
+        >
+          <!-- lista de compañia -->
+          <div class="listFooter">
+            <h3 class="listTitle">Compañía</h3>
+            <ul>
+              <li class="listItem">
+                <a href="#">Acerca de</a>
+              </li>
+              <li class="listItem">
+                <a href="#">Empleo</a>
+              </li>
+              <li class="listItem">
+                <a href="#">For the Record</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- lista de comunidades -->
+          <div class="listFooter">
+            <h3 class="listTitle">Comunidades</h3>
+            <ul>
+              <li class="listItem"><a href="#">Para artistas</a></li>
+              <li class="listItem"><a href="#">Desarrolladores</a></li>
+              <li class="listItem"><a href="#">Publicidad</a></li>
+              <li class="listItem"><a href="#">Inversionistas</a></li>
+              <li class="listItem"><a href="#">Proveedores</a></li>
+            </ul>
+          </div>
+
+          <!-- lista de enlaces útiles -->
+          <div class="listFooter">
+            <h3 class="listTitle">Enlaces útiles</h3>
+            <ul>
+              <li class="listItem"><a href="#">Ayuda</a></li>
+              <li class="listItem"><a href="#">App móvil gratis</a></li>
+              <li class="listItem">
+                <a href="#">Contenido popular por país</a>
+              </li>
+              <li class="listItem"><a href="#">Import your music</a></li>
+            </ul>
+          </div>
+
+          <!-- lista de planes de Spotify -->
+          <div class="listFooter">
+            <h3 class="listTitle">Planes de Spotify</h3>
+            <ul>
+              <li class="listItem"><a href="#">Premium Individual</a></li>
+              <li class="listItem"><a href="#">Premium Duo</a></li>
+              <li class="listItem"><a href="#">Premium Familiar</a></li>
+              <li class="listItem"><a href="#">Premium para Estudiantes</a></li>
+              <li class="listItem"><a href="#">Versión gratuita</a></li>
+            </ul>
+          </div>
+
+          <!-- redes sociales -->
+          <article class="redesSociales">
+            <div class="contentImgRedSocial">
+              <img
+                class="foto"
+                src="./assets/icons/instagram.png"
+                alt="Instagram"
+              />
+            </div>
+            <div class="contentImgRedSocial">
+              <img
+                class="foto"
+                src="./assets/icons/twitter.png"
+                alt="Twitter"
+              />
+            </div>
+            <div class="contentImgRedSocial">
+              <img
+                class="foto"
+                src="./assets/icons/facebook.png"
+                alt="Facebook"
+              />
+            </div>
+          </article>
+        </section>
+
+        <section class="credist">
+          <p class="label-credist">© 2025 Spotify AB</p>
+        </section>
+      </section>
     </section>
   </body>
 </html>
