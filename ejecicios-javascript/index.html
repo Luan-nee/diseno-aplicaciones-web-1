@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./datosUsuarios.js" defer></script>
+  <script src="./determinarNumero.js" defer></script>
+  <script src="./calcularIGV.js" defer></script>
+  <script src="./calcularMontoEquitativo.js" defer></script>
+  <script src="./juntarCadenas.js" defer></script>
+  <script src="./calcularTriangulos.js" defer></script>
+</head>
+<body>
+  <form action="" id="form-datosUsuarios">
+    <h1>LOGIN PARA PRACTICAR CON JAVASCRIPT</h1>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" required>
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" required>
+    </label>
+    <button type="submit">
+      Enviar
+    </button>
+  </form>
+  <hr>
+  <form action="" id="form-determinarNumero">
+    <h2>DETERMINAR SI UN NÚMERO ES POSITIVO, NEGATIVO O CERO</h2>
+    <label for="numero">Número:</label>
+    <input type="number" id="numero" name="numero" required>
+    <button type="submit">
+      Verificar
+    </button>
+  </form>
+  <hr>
+  <form action="" id="form-calcularIGV">
+    <h2>CALCULAR IGV</h2>
+    <label for="monto">Monto:</label>
+    <input type="number" id="monto" name="monto" required>
+    <button type="submit">
+      Calcular
+    </button>
+  </form>
+  <hr>
+  <form action="" id="form-calcularMontoEquitativo">
+    <h2>CALCULAR MONTO EQUITATIVO ENTRE 3 AMIGOS</h2>
+    <label for="precio">Monto:</label>
+    <input type="number" id="precio" name="precio" required>
+    <button type="submit">
+      Calcular
+    </button>
+  </form>
+  <hr>
+  <form action="" id="form-juntarCadenas">
+    <h2>JUNTAR CADENAS DE TEXTO</h2>
+    <label for="texto1">Texto 1:</label>
+    <input type="text" id="texto1" name="texto1" required>
+    <label for="texto2">Texto 2:</label>
+    <input type="text" id="texto2" name="texto2" required>
+    <button type="submit">
+      Combinar
+    </button>
+  </form>
+  <hr>
+  <form action="" id="form-calcularTriangulos">
+    <h2>CALCULAR ÁREA DE TRIÁNGULOS</h2>
+    <h4>Triangulo A</h4>
+    <label for="base-triangulo-a">Base del triangulo A:</label> 
+    <input type="number" id="base-triangulo-a" name="base-triangulo-a" required>
+    <label for="altura-triangulo-a">Altura del triangulo A:</label> 
+    <input type="number" id="altura-triangulo-a" name="altura-triangulo-a" required>
+    <h4>Triangulo B</h4>  
+    <label for="base-triangulo-b">Base del triangulo B:</label> 
+    <input type="number" id="base-triangulo-b" name="base-triangulo-b" required>
+    <label for="altura-triangulo-b">Altura del triangulo B:</label> 
+    <input type="number" id="altura-triangulo-b" name="altura-triangulo-b" required>
+    <button type="submit">
+      Calcular Áreas 
+    </button>
+  </form>
+</body>
+</html>
