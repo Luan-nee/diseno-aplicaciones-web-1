@@ -127,7 +127,263 @@
   height: 100%;
 }
 
+.ArtistaCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #121212;
+  padding: 10px 10px 5px 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 8px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.ArtistaCard:hover {
+  background-color: #1f1f1f;
+  cursor: pointer;
+}
+.ArtistaCard .fotoContent {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+}
+.ArtistaCard .fotoContent .foto {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ArtistaCard .fotoContent .playButton {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+.ArtistaCard:hover .playButton {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  cursor: pointer;
+}
+.ArtistaCard .nombre {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  text-align: start;
+  padding-left: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 3px;
+}
+.ArtistaCard .descripcion {
+  margin: 0px;
+  color: #B3B3B3;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: start;
+  padding-left: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.AlbumCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #121212;
+  padding: 10px 10px 5px 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 8px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.AlbumCard:hover {
+  background-color: #1f1f1f;
+  cursor: pointer;
+}
+.AlbumCard .fotoContent {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 170px;
+  height: 170px;
+}
+.AlbumCard .fotoContent .foto {
+  border-radius: 5px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.AlbumCard .fotoContent .playButton {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+.AlbumCard:hover .playButton {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  cursor: pointer;
+}
+.AlbumCard .nombre {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  text-align: start;
+  padding-left: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 3px;
+}
+.AlbumCard .descripcion {
+  margin: 0px;
+  color: #B3B3B3;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: start;
+  padding-left: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.listFooter {
+  padding: 0 10px;
+}
+.listFooter .listTitle {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+}
+.listFooter ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.listFooter .listItem {
+  margin-bottom: 8px;
+  font-family: Arial, sans-serif;
+  color: #B3B3B3;
+  font-size: 16px;
+  font-weight: normal;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+.listFooter .listItem:hover {
+  color: #FFFFFF;
+}
+
+.redesSociales {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.contentImgRedSocial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #282828;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.contentImgRedSocial .foto {
+  width: 20px;
+  height: 20px;
+}
+.contentImgRedSocial:hover {
+  background-color: #404040;
+}
+
+.credist {
+  background-color: #121212;
+  padding: 30px 0;
+  border-top: 1px solid #282828;
+}
+.credist .label-credist {
+  color: #B3B3B3;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
 .navbar {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px 24px;
+  gap: 1rem;
+}
+.navbar .leftNav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,5 +391,48 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 1rem;
+  gap: 12px;
+}
+.navbar .rightNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 12px;
+}
+.navbar .rightNav .masOpciones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contentSection {
+  background-color: #121212;
+  padding: 10px;
+}
+.contentSection .titleSection {
+  color: white;
+  font-family: Arial, sans-serif;
+}
+.contentSection .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 12px;
+  width: 100%;
+  overflow-y: auto;
 }

@@ -1,0 +1,16 @@
+$copyright-text-color: #B3B3B3;
+$footer-bg-color: #121212;
+$border-color: #282828;
+
+.credist {
+  background-color: $footer-bg-color;
+  padding: 30px 0;
+  border-top: 1px solid #282828;
+  
+  .label-credist {
+    color: $copyright-text-color;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+}

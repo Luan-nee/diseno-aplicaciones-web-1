@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <nav class="navbar" style="display: flex; justify-content: space-between; padding: 12px 24px;">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
       <!-- logo spotify, logo de casa, barra de busqueda -->
-      <div style="display: flex; flex-direction: row; gap: 12px;">
+      <div class="leftNav">
         <!-- logo de spotify -->
         <div class="logoContent">
           <img
@@ -19,61 +21,236 @@
             alt=""
           />
         </div>
-  
+
         <!-- logo de casa -->
         <div class="logoContent">
           <img class="logoImage" src="./assets/icons/home.png" alt="" />
         </div>
-  
+
         <!-- barra de busqueda -->
         <div class="searchBar">
           <div class="logoSearch">
-            <img src="./assets/icons/search.png" alt="">
+            <img src="./assets/icons/search.png" alt="" />
           </div>
           <input type="text" placeholder="Buscar en Spitify-Pirata" />
           <div class="logoExplore">
-            <img src="./assets/icons/explore.png" alt="">
+            <img src="./assets/icons/explore.png" alt="" />
           </div>
         </div>
       </div>
 
-      <div style="display: flex; flex-direction: row; gap: 12px;">
+      <div class="rightNav">
         <!-- más opciones -->
-        <div style="display: flex; flex-direction: row; align-items: center;">
+        <div class="masOpciones">
           <a href="/#premiun" class="linkNav">
-            <span class="linkNav-label">
-              Premiun
-            </span>
+            <span class="linkNav-label"> Premiun </span>
           </a>
           <a href="/#Ayuda" class="linkNav">
-            <span class="linkNav-label">
-              Ayuda
-            </span>
+            <span class="linkNav-label"> Ayuda </span>
           </a>
           <a href="/#Descargar" class="linkNav">
-            <span class="linkNav-label">
-              Descargar
-            </span>
+            <span class="linkNav-label"> Descargar </span>
           </a>
-          <div style="height: 24px; width: 1px; background-color: white;" ></div>
+          <div style="height: 24px; width: 1px; background-color: white"></div>
           <a href="/#Instalar aplicación" class="linkNav">
-            <span class="linkNav-label">
-              Instalar aplicación
-            </span>
+            <span class="linkNav-label"> Instalar aplicación </span>
           </a>
           <a href="/#Regístrate" class="linkNav">
-            <span class="linkNav-label">
-              Regístrate
-            </span>
+            <span class="linkNav-label"> Regístrate </span>
           </a>
         </div>
-  
+
         <!-- btn iniciar seción -->
         <button class="btn">
           <span class="btn-label"> Iniciar sesión </span>
         </button>
       </div>
-
     </nav>
+
+    <section id="contenido-principal">
+      <!-- LISTA DE ARTISTAS -->
+      <section class="contentSection">
+        <h2 class="titleSection">Artistas populares</h2>
+        <!-- LISTA DE CARD ARTISTAS -->
+        <div class="list">
+          <!-- SCRIPT PARA GENERAR CARDS ARTISTAS -->
+          <script>
+            const artistaContainer = document.currentScript.parentElement;
+            for (let i = 4; i <= 9; i++) {
+              const artistaCard = document.createElement("div");
+              artistaCard.className = "ArtistaCard";
+              artistaCard.innerHTML = `
+                <div class="fotoContent">
+                  <img class="foto" src="./assets/main/Ellipse ${i}.png" alt="Artista ${i}">
+                  <img class="playButton" src="./assets/icons/play-green.png" alt="button play">
+                </div>
+                <p class="nombre">Nombre del Artista</p>
+                <p class="descripcion">Artista</p>
+                `;
+              artistaContainer.appendChild(artistaCard);
+            }
+          </script>
+        </div>
+      </section>
+
+      <!-- LISTA DE ÁLBUMES Y SENCILLOS POPULARES -->
+      <section class="contentSection">
+        <h2 class="titleSection">Álmbumes y sencillos populares</h2>
+        <!-- LISTA CARD ÁLBUMES -->
+        <div class="list">
+          <!-- SCRIPT PARA GENERAR CARDS ÁLBUMES -->
+          <script>
+            const albumContainer = document.currentScript.parentElement;
+            for (let i = 1; i <= 10; i++) {
+              const albumCard = document.createElement("div");
+              albumCard.className = "AlbumCard";
+              albumCard.innerHTML = `
+                  <div class="fotoContent">
+                    <img class="foto" src="./assets/albums/${i}.png" alt="Álbum ${i}">
+                    <img class="playButton" src="./assets/icons/play-green.png" alt="button play">
+                  </div>
+                  <p class="nombre">Nombre del Artista</p>
+                  <p class="descripcion">Artista</p>
+                  `;
+              albumContainer.appendChild(albumCard);
+            }
+          </script>
+        </div>
+      </section>
+
+      <!-- LISTA DE ESTACIONES POPULARES (clon de Álmbumes y sencillos populares) -->
+      <section class="contentSection">
+        <h2 class="titleSection">Estaciones populares</h2>
+        <!-- LISTA CARD ÁLBUMES -->
+        <div class="list">
+          <!-- SCRIPT PARA GENERAR CARDS ÁLBUMES -->
+          <script>
+            const estacionContainer = document.currentScript.parentElement;
+            for (let i = 1; i <= 10; i++) {
+              const albumCard = document.createElement("div");
+              albumCard.className = "AlbumCard";
+              albumCard.innerHTML = `
+                  <div class="fotoContent">
+                    <img class="foto" src="./assets/albums/${i}.png" alt="Álbum ${i}">
+                    <img class="playButton" src="./assets/icons/play-green.png" alt="button play">
+                  </div>
+                  <p class="descripcion">Desripción detallada de la estación ${i} - ejemplo.</p>
+                  `;
+              estacionContainer.appendChild(albumCard);
+            }
+          </script>
+        </div>
+      </section>
+
+      <!-- LISTA DESTACADAS (clon de Álmbumes y sencillos populares) -->
+      <section class="contentSection">
+        <h2 class="titleSection">Listas destacadas</h2>
+        <!-- LISTA CARD ÁLBUMES -->
+        <div class="list">
+          <!-- SCRIPT PARA GENERAR CARDS ÁLBUMES -->
+          <script>
+            const destacadasContainer = document.currentScript.parentElement;
+            for (let i = 1; i <= 10; i++) {
+              const albumCard = document.createElement("div");
+              albumCard.className = "AlbumCard";
+              albumCard.innerHTML = `
+                  <div class="fotoContent">
+                    <img class="foto" src="./assets/albums/${i}.png" alt="Álbum ${i}">
+                    <img class="playButton" src="./assets/icons/play-green.png" alt="button play">
+                  </div>
+                  <p class="descripcion">Tu actualización semanal de las ...${i}</p>
+                  `;
+              destacadasContainer.appendChild(albumCard);
+            }
+          </script>
+        </div>
+      </section>
+
+      <!-- AGREGANDO ESPACIO VACÍO -->
+      <div style="width: 100%; height: 1  40px;"></div>
+
+      <!-- FOOTER -->
+      <section style="display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid #282828; padding: 45px 0;">
+        <!-- lista de compañia -->
+        <div class="listFooter">
+          <h3 class="listTitle">Compañía</h3>
+          <ul>
+            <li class="listItem">
+              <a href="#">Acerca de</a>
+            </li>
+            <li class="listItem">
+              <a href="#">Empleo</a>
+            </li>
+            <li class="listItem">
+              <a href="#">For the Record</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- lista de comunidades -->
+        <div class="listFooter">
+          <h3 class="listTitle">Comunidades</h3>
+          <ul>
+            <li class="listItem"><a href="#">Para artistas</a></li>
+            <li class="listItem"><a href="#">Desarrolladores</a></li>
+            <li class="listItem"><a href="#">Publicidad</a></li>
+            <li class="listItem"><a href="#">Inversionistas</a></li>
+            <li class="listItem"><a href="#">Proveedores</a></li>
+          </ul>
+        </div>
+
+        <!-- lista de enlaces útiles -->
+        <div class="listFooter">
+          <h3 class="listTitle">Enlaces útiles</h3>
+          <ul>
+            <li class="listItem"><a href="#">Ayuda</a></li>
+            <li class="listItem"><a href="#">App móvil gratis</a></li>
+            <li class="listItem"><a href="#">Contenido popular por país</a></li>
+            <li class="listItem"><a href="#">Import your music</a></li>
+          </ul>
+        </div>
+
+        <!-- lista de planes de Spotify -->
+        <div class="listFooter">
+          <h3 class="listTitle">Planes de Spotify</h3>
+          <ul>
+            <li class="listItem"><a href="#">Premium Individual</a></li>
+            <li class="listItem"><a href="#">Premium Duo</a></li>
+            <li class="listItem"><a href="#">Premium Familiar</a></li>
+            <li class="listItem"><a href="#">Premium para Estudiantes</a></li>
+            <li class="listItem"><a href="#">Versión gratuita</a></li>
+          </ul>
+        </div>
+
+        <!-- redes sociales -->
+        <article class="redesSociales">
+          <div class="contentImgRedSocial">
+            <img
+              class="foto"
+              src="./assets/icons/instagram.png"
+              alt="Instagram"
+            />
+          </div>
+          <div class="contentImgRedSocial">
+            <img class="foto" src="./assets/icons/twitter.png" alt="Twitter" />
+          </div>
+          <div class="contentImgRedSocial">
+            <img
+              class="foto"
+              src="./assets/icons/facebook.png"
+              alt="Facebook"
+            />
+          </div>
+        </article>
+      </section>
+
+      <section class="credist">
+        <p class="label-credist">© 2025 Spotify AB</p>
+      </section>
+    </section>
+
+    <section id="contenido-biblioteca">
+      
+    </section>
   </body>
 </html>

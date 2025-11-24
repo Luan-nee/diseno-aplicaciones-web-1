@@ -1,0 +1,73 @@
+$card-background: #121212;
+$text-color-primary: #FFFFFF;
+$text-color-secondary: #B3B3B3;
+
+.ArtistaCard {
+  display: flex;
+  flex-direction: column;
+  background-color: $card-background;
+  padding: 10px 10px 5px 10px;
+  width: fit-content;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: lighten($card-background, 5%);
+    cursor: pointer;
+  }
+
+  .fotoContent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px; 
+    height: 170px; 
+    // overflow: hidden;
+    border-radius: 50%;
+    
+    .foto {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .playButton{
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      bottom: 10px;
+      right: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: translateY(10px);
+    }
+  }
+
+  &:hover .playButton{
+    opacity: 1;
+    transform: translateY(0px);
+    cursor: pointer;
+  }
+
+  .nombre {
+    color: $text-color-primary;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    text-align: start;
+    padding-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 3px;
+  }
+
+  .descripcion {
+    margin: 0px;
+    color: $text-color-secondary;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: start;
+    padding-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+}

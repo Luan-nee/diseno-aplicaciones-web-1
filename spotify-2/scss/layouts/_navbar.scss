@@ -1,5 +1,25 @@
 .navbar{
-  display: flex;
   flex-direction: row;
+  display: flex; 
+  justify-content: space-between; 
+  padding: 12px 24px;
   gap: 1rem;
+
+  .leftNav{
+    display: flex; 
+    flex-direction: row; 
+    gap: 12px;
+  }
+
+  .rightNav{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+
+    .masOpciones{
+      display: flex; 
+      flex-direction: row; 
+      align-items: center;
+    }
+  }
 }

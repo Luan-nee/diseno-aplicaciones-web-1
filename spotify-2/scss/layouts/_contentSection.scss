@@ -1,0 +1,17 @@
+.contentSection {
+  background-color: #121212;
+  padding: 10px;
+
+  .titleSection {
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+    overflow-y: auto;
+  }
+}
